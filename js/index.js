@@ -1,11 +1,12 @@
 "use strict";
-let burger = document.querySelector(".header__burger");
-let menu = document.querySelector(".header__nav-block");
-let menuLinks = document.querySelectorAll(".header__nav-items");
-let headerSearch = document.querySelector(".header__search");
-let headerBtn = document.querySelector(".header__btn");
-let headerBtnClose = document.querySelector(".header__button-close");
-let headerLogo = document.querySelector(".header__logo");
+const burger = document.querySelector(".header__burger");
+const menu = document.querySelector(".header__nav-block");
+const menuLinks = document.querySelectorAll(".header__nav-items");
+const headerSearch = document.querySelector(".header__search");
+const headerBtn = document.querySelector(".header__btn");
+const headerBtnClose = document.querySelector(".header__button-close");
+const headerLogo = document.querySelector(".header__logo");
+const input = document.querySelector(".header__input");
 
 const mediaQuery768 = window.matchMedia("(max-width:768px)");
 const mediaQuery500 = window.matchMedia("(max-width:500px)");
@@ -25,7 +26,7 @@ menuLinks.forEach((link) => {
   });
 });
 
-headerBtn.addEventListener("click", function () {
+function openSearch() {
   headerSearch.style.display = "flex";
   headerBtn.style.display = "none";
   if (mediaQuery768.matches) {
@@ -34,32 +35,24 @@ headerBtn.addEventListener("click", function () {
   if (mediaQuery500.matches) {
     burger.style.display = "none";
   }
+}
+if (input.value !== "") {
+  openSearch();
+}
+
+headerBtn.addEventListener("click", function () {
+  openSearch();
 });
 
-// function fetched() {
-//   console.log("fetch");
-//   const formData = new FormData();
-//   formData.set("alex", "Alex");
-//   fetch("php/post.php", {
-//     method: "POST",
-//     body: formData,
-//   })
-//     .then((res) => res.json())
-//     .then((res) => console.log(res))
-//     .catch((err) => console.log(err.message));
-// }
-//
-// fetched();
-
-headerBtnClose.addEventListener("click", () => {
-  headerSearch.style.display = "none";
-  headerBtn.style.display = "block";
-  headerLogo.style.display = "block";
-  if (mediaQuery500.matches) {
-    burger.style.display = "block";
-  }
-  // fetched();
-});
+// headerBtnClose.addEventListener("click", () => {
+//   headerSearch.style.display = "none";
+//   headerBtn.style.display = "block";
+//   headerLogo.style.display = "block";
+//   if (mediaQuery500.matches) {
+//     burger.style.display = "block";
+//   }
+//   // fetched();
+// });
 
 const swiper = new Swiper(".swiper", {
   slidesPerView: 1,
