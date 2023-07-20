@@ -62,7 +62,7 @@
           </svg>
         </button>
 
-        <form class="header__search" method="POST">
+        <form action="../../../sites/Euclid/" class="header__search" method="POST">
           <input class='header__input' type="text" name="search" placeholder='Что будем искать?'>
           <button class="header__btn" type="submit">
             <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,10 +91,7 @@
               <div class="swiper-slide hero_background2"></div>
               <div class="swiper-slide hero_background3"></div>
             </div>
-
             <div class="swiper-pagination"></div>
-
-
           </div>
 
           <div class="hero__block">
@@ -610,7 +607,7 @@
         </a>
       </div>
     </div>
-    <di v class="footer__request">
+    <div class="footer__request">
       < form id="form" class="footer__form" action="POST">
         <label class="footer__label">Оставить заявку</label>
         <input aria-label="Введите Фамилию,имя и отчество" type="text" class="footer__input" placeholder="Фамилия,имя и отчество*">
@@ -641,7 +638,7 @@
             </svg>
           </a>
         </div>
-    </di>
+    </div>
 
     <p class="paragraph footer__paragraph">
       Высокий уровень вовлечения представителей целевой аудитории является

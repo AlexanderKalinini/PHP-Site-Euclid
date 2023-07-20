@@ -44,16 +44,6 @@ headerBtn.addEventListener("click", function () {
   openSearch();
 });
 
-// headerBtnClose.addEventListener("click", () => {
-//   headerSearch.style.display = "none";
-//   headerBtn.style.display = "block";
-//   headerLogo.style.display = "block";
-//   if (mediaQuery500.matches) {
-//     burger.style.display = "block";
-//   }
-//   // fetched();
-// });
-
 const swiper = new Swiper(".swiper", {
   slidesPerView: 1,
   slidesPerGroup: 1,
