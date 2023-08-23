@@ -12,6 +12,13 @@ const mediaQuery768 = window.matchMedia("(max-width:768px)");
 const mediaQuery500 = window.matchMedia("(max-width:500px)");
 const mediaQuery1024 = window.matchMedia("(max-width:1024px)");
 
+const path = location.hostname + location.pathname;
+console.log(path);
+if (location.search.endsWith("success=true")) {
+  alert("Заявка успешно отправлена");
+  history.pushState(null, null, "./");
+}
+
 burger.addEventListener("click", () => {
   burger.classList.toggle("header__burger_active");
   menu.classList.toggle("header__nav_active");

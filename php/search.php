@@ -23,6 +23,5 @@ function highlight(string $search, string $path)
     },
     $site
   );
-
   return str_replace("placeholder='Что будем искать?'", "value='$search'", $site);
 }
