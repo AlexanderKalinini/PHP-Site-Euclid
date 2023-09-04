@@ -2,12 +2,11 @@
 class Database
 {
 
-  protected string $servername = "localhost";
-  protected string $dbName = 'euclid';
+  protected string $servername = "db";
+  protected string $dbName = "euclid";
   protected string $username = "root";
-  protected string $password = "";
+  protected string $password = "root";
   protected PDO $connection;
-
 
   public function __construct()
   {

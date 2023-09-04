@@ -5,7 +5,7 @@ $search = isset($_POST['search']) ? htmlspecialchars(trim($_POST['search'])) : '
 if (strlen($search) > 2) {
   echo highlight($search, 'php/site.php');
 } else {
-  include_once 'php/site.php';
+  echo include_once 'php/site.php';
 }
 
 function highlight(string $search, string $path)
@@ -23,5 +23,5 @@ function highlight(string $search, string $path)
     },
     $site
   );
-  return str_replace("placeholder='Что будем искать?'", "value='$search'", $site);
+  return  $site;
 }
